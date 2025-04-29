@@ -35,11 +35,19 @@ To write a Python program to perform addition and division operations using a cl
 ### PROGRAM
 
 ```
-
-
+grades_input = input()
+try:
+    grades = [int(grade.strip()) for grade in grades_input.split(',')]
+    print(grades)
+except:
+    invalid_grade = grades_input.split(',')
+    print("The grades you entered were in an invalid format.")
+    print(invalid_grade)
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/3f99937b-43e1-4a6b-bb58-9686353159f9)
 
 ### RESULT
+Thus the program ARITHMETIC CALCULATION USING CLASS have been executed and verified.
