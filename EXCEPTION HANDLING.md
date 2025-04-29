@@ -10,25 +10,52 @@ To create a Python program that prompts the user for a list of grades separated 
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Read a string `input_str` from the user using `input()`.  
-3. Split the input string using commas (`,`) to create a list of grades.  
-4. Use a `try` block to attempt converting each item in the grades list to an integer and store the result in `l1`.  
-5. If the conversion is successful, print the list `l1` containing the integer values.  
-6. If an error occurs during conversion (for example, if the input is not a valid number), catch the exception and print an error message: `"The grades you entered were in an invalid format."` along with the original grades list.  
-7. Terminate the program.
+Start the program.
+Use a try block to:
+a. Accept an integer input n (number of list elements).
+If a ValueError occurs during conversion, display an appropriate error message.
+If input is valid, proceed to:
+a. Initialize an empty list a.
+b. Use a loop for i in range(n) to:
+i. Accept an integer input element and append it to the list.
+ii. If a non-integer is entered, a ValueError will be caught.
+Print the list a.
+Ask the user to enter an index number to access an element from the list.
+Use another try block to:
+a. Attempt to print the element at the given index.
+Catch an IndexError if the index is out of range and print a custom message.
+End the program.
 
 ---
 
 ### PROGRAM
 
 ```
-Reg.No
-Name
 Add Your Code Here
+try:
+    n = int(input(""))
+    
+    a = []
+    for i in range(n):
+        element = int(input(""))
+        a.append(element)
+    
+    print(a)
+    
+    indexno = int(input(""))
+    
+    try:
+        print(a[indexno])
+    except IndexError:
+        print(f"{indexno} is not accepted")
+    
+except ValueError as e:
+    print("Invalid input. Please enter a valid integer.")
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/a0d49975-c1b9-4b8a-a335-2405488718c2)
 
 ### RESULT
+Thus the program EXCEPTION HANDLING have been executed and verified.
