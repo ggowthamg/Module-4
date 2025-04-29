@@ -28,16 +28,24 @@ To write a Python program to take the radius from the user and find the area of 
 ### PROGRAM
 
 ```
-
+class saveetha:
+    def __init__(self,r):
+        self.radius = r
+        self.a = 3.141592*r**2
+    def get_area(self):
+        return self.a
+        
+r = int(input(""))
+b = saveetha(r)
+print(f"Area of circle: {b.get_area():.2f}")
 
 
 ```
 
 ### OUTPUT
-
-
+![image](https://github.com/user-attachments/assets/e2f895e8-628b-4f77-8ed0-ec1658e91a51)
 
 ### RESULT
-
+Thus the program CLASS AND OBJECTS - AREA OF CIRCLE have been executed and verified sucessfully
 
 
